@@ -3,8 +3,8 @@ import {
   AiFillFacebook,
   AiFillInstagram,
   AiFillYoutube,
-  AiOutlineTwitter,
 } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import {
   footercompanyLinks,
@@ -18,9 +18,9 @@ const Footer = () => {
     <div className="bg-[#000] text-white">
       <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#342ac8] py-7">
         <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
-          <span className="text-[#56d879]">Subscribe</span> us for get news{" "}
+          <span className="text-[#56d879]">Subscribe</span> to receive the latest updates on news,{" "}
           <br />
-          events and offers
+          events, and exclusive offers
         </h1>
         <div>
           <input
@@ -43,22 +43,21 @@ const Footer = () => {
             style={{ filter: "brightness(0) invert(1)" }}
           />
           <br />
-          <p>The home and elements needeed to create beatiful products.</p>
+          <p>The home and elements needed to create beautiful products.</p>
           <div className="flex items-center mt-[15px]">
-            <AiFillFacebook size={25} className="cursor-pointer" />
-            <AiOutlineTwitter
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-            <AiFillInstagram
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-            <AiFillYoutube
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-          </div>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+    <AiFillFacebook size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <FaXTwitter size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <AiFillInstagram size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <AiFillYoutube size={25} className="cursor-pointer" />
+  </a>
+</div>
         </ul>
 
         <ul className="text-center sm:text-start">
@@ -111,7 +110,7 @@ const Footer = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
-        <span>© 2023 LA. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} LA. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
         <div className="sm:block flex items-center justify-center w-full">
           <img
